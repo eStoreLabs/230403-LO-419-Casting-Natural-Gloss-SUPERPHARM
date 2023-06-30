@@ -1,22 +1,20 @@
 @charset "UTF-8";
 
 @font-face {
-  font-family: 'Gotham';
-  src: url('fonts/Gotham-Bold.otf');
+  font-family: "Gotham";
+  src: url("fonts/Gotham-Bold.otf");
   font-weight: 700;
   font-style: normal;
 }
 
-
 @font-face {
-  font-family: 'Gotham';
-  src: url('fonts/Gotham-Book.otf');
+  font-family: "Gotham";
+  src: url("fonts/Gotham-Book.otf");
   font-weight: 400;
   font-style: normal;
 }
 
-
-$regular: 'Gotham', sans-serif;
+$regular: "Gotham", sans-serif;
 $pink: #e9809c;
 
 html,
@@ -63,18 +61,18 @@ body {
     font-family: $regular;
     color: #000;
   }
-  .es-section__title{
+  .es-section__title {
     @include text;
-      font-weight: 700;
-      text-transform: uppercase;
-      font-size: 38px;
-      letter-spacing: -1px;
-      margin-bottom: 56px;
-      font-family: $regular;
-      text-align: center;
-      span {
-        font-weight: 300;
-      }
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 38px;
+    letter-spacing: -1px;
+    margin-bottom: 56px;
+    font-family: $regular;
+    text-align: center;
+    span {
+      font-weight: 300;
+    }
   }
   .es-kv {
     img {
@@ -132,24 +130,61 @@ body {
           max-width: 45%;
         }
       }
-     &__img {
-      margin: unset;
-    } 
+      &__img {
+        margin: unset;
+      }
     }
   }
-  .es-benefits{
-    &__container{
+  .es-discover {
+    background-color: $pink;
+    text-align: center;
+    padding-block: 1.5rem;
+    padding-inline: 1rem;
+    &__header {
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+  }
+  .es-formula {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block: 1.5rem;
+    padding-inline: 1rem;
+    &__header {
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    &__img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  @media (min-width: 768px) {
+      .es-formula {
+        flex-direction: row;
+        &__Ctn {
+        &--left {
+          max-width: 45%;
+          padding-left: 2rem;
+        }
+      }
+      }
+      
+  }
+  .es-benefits {
+    &__container {
       width: 100%;
       display: grid;
       grid-template-columns: repeat(1, 1fr);
     }
-    &__packshot{
-      img{
+    &__packshot {
+      img {
         width: 100%;
         height: 100%;
       }
     }
-    &__content{
+    &__content {
       height: 100%;
       min-height: 300px;
       padding: 32px;
@@ -158,16 +193,94 @@ body {
       justify-content: center;
       background-color: $pink;
     }
-    &__title{
+    &__title {
       font-size: 20px;
       text-transform: uppercase;
       font-weight: 700;
 
-      span{
+      span {
         font-size: 30px;
       }
     }
-      .es-benefits__title::after{
+    .es-benefits__title::after {
+      content: "";
+      display: block;
+
+      width: 180px;
+      height: 2px;
+      margin-top: 20px;
+    }
+    &__text {
+      @include text;
+    }
+    &__text--one {
+      order: 1;
+    }
+    &__img--one {
+      order: 2;
+    }
+    &__text--two {
+      order: 3;
+    }
+    &__img--two {
+      order: 4;
+    }
+  }
+
+  .es-products {
+    background-color: #c6a49a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .es-section__title {
+      color: #fff;
+      padding-top: 30px;
+      font-size: 30px;
+    }
+    &__img {
+      display: block;
+      width: 100%;
+      img {
+        max-width: 100%;
+      }
+    }
+    &__single {
+      width: 100%;
+      padding: 20px;
+      text-align: center;
+    }
+    &__title {
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 18px;
+      position: relative;
+    }
+    &__desc {
+      color: #fff;
+      font-size: 14px;
+    }
+  }
+
+  .es-trends {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    &__img {
+      width: 100%;
+      height: 100%;
+      img {
+        width: 100%;
+      }
+    }
+    &__content {
+      padding: 16px 34px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    &__title {
+      text-transform: uppercase;
+      &::after {
         content: "";
         display: block;
 
@@ -175,173 +288,86 @@ body {
         height: 2px;
         margin-top: 20px;
       }
-    &__text{
-      @include text;
-
     }
-    &__text--one{
-      order: 1;
-    } 
-    &__img--one{
-     order: 2;
+    &__text {
     }
-    &__text--two{
-     order: 3;
-    } 
-   &__img--two{
-     order: 4;
-    }  
+    &__text--expert {
+      font-weight: 700;
+    }
   }
 
-.es-products{
-  background-color: #c6a49a;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  .es-section__title{
-    color: #fff;
-    padding-top: 30px;
-    font-size: 30px;
-  }
-  &__img{
-    display: block;
-    width: 100%;
-    img{
-      max-width:100%;
-    }
-  }
-  &__single{
-    width: 100%;
-    padding: 20px;
-    text-align: center;
-  }
-  &__title{
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 18px;
-    position: relative;
-  }
-  &__desc{
-    color: #fff;
-    font-size: 14px;
-  }
-}
-
-.es-trends{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  &__img{
-    width: 100%;
-    height: 100%;
-    img{
-      width: 100%;
-    }
-  }
-  &__content{
-    padding: 16px 34px;
+  .es-video {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    background-image: url(images/video-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: $pink;
+    min-height: 400px;
+    &__title {
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 30px;
 
-  }
-  &__title{
-
-    text-transform: uppercase;
-    &::after{
-      content: "";
-        display: block;
-
-        width: 180px;
-        height: 2px;
-        margin-top: 20px;
+      text-align: center;
+      padding: 30px;
     }
-  }
-  &__text{
-
-  }
-  &__text--expert{
-    font-weight: 700;
-  }
-}
-
-.es-video{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-image: url(images/video-bg.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-color: $pink;
-  min-height: 400px;
-  &__title{
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 30px;
-
-    text-align: center;
-    padding: 30px;
-  }
-  &__text{
-
-    margin-top: 20px;
-    padding: 10px;
-    text-align: center;
-  }
-  &__video{
-    width: 100%;
-    height: 500px;
-    padding: 32px;
-    iframe{
+    &__text {
+      margin-top: 20px;
+      padding: 10px;
+      text-align: center;
+    }
+    &__video {
       width: 100%;
-      height: 100%;
+      height: 500px;
+      padding: 32px;
+      iframe {
+        width: 100%;
+        height: 100%;
+      }
     }
   }
-  
-}
-  
 
-  
-  .es-colors{
+  .es-colors {
     width: 100%;
     background-color: $pink;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    &__title{
-
+    &__title {
       text-transform: uppercase;
       text-align: center;
       padding-top: 12px;
-      span{
+      span {
         font-weight: lighter;
       }
     }
-    &__container{
+    &__container {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       height: auto;
       padding: 32px;
     }
-    &__single{
+    &__single {
       display: flex;
       flex-direction: column;
       height: auto;
       margin: 0 2px;
       max-width: 180px;
     }
-    &__img{
+    &__img {
       margin-top: 20px;
       width: 100%;
-      img{
+      img {
         width: 100%;
       }
     }
-    &__text{
+    &__text {
       height: 100%;
       @include text;
 
@@ -351,17 +377,18 @@ body {
       text-transform: uppercase;
       text-align: center;
       font-size: 14px;
-      p,h2{
+      p,
+      h2 {
         margin: 5px 0;
       }
     }
-    &__title--single{
+    &__title--single {
       text-transform: uppercase;
       text-align: center;
       font-weight: 600;
     }
   }
- 
+
   .es-disc {
     background-color: $pink;
     padding: 32px;
@@ -388,17 +415,16 @@ body {
         font-weight: 300;
       }
     }
-    &__content{
+    &__content {
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
       padding-bottom: 25px;
-      p{
+      p {
         line-height: 25px;
-
       }
-      span{
+      span {
         font-weight: 700;
       }
     }
@@ -422,7 +448,6 @@ body {
     }
     &__img {
       @include img;
-     
     }
     &__name {
       @include text;
@@ -430,14 +455,12 @@ body {
       font-weight: 700;
       text-align: center;
       margin-bottom: 18px;
-
     }
     &__desc {
       @include text;
       text-align: center;
       margin-top: 10px;
       margin-bottom: 5px;
-
     }
     &__link {
       @include text;
@@ -450,7 +473,7 @@ body {
       display: inline-block;
     }
   }
-  .es-models{
+  .es-models {
     background-image: url(images/models.png);
     background-repeat: no-repeat;
     background-position: center center;
@@ -458,7 +481,7 @@ body {
     min-height: 550px;
     display: flex;
     justify-content: center;
-    &__img{
+    &__img {
       margin: auto 0;
       margin-bottom: 20px;
       max-width: 320px;
@@ -471,17 +494,14 @@ body {
     align-items: center;
     padding: 25px;
     &__logo {
-      img{
+      img {
         max-width: 200px;
       }
     }
   }
 
-
-
   @media screen and (min-width: 768px) {
-
-    .es-products{
+    .es-products {
       display: block;
       position: relative;
       background-image: url(images/products-bg.png);
@@ -489,50 +509,47 @@ body {
       background-position: center center;
       background-size: cover;
       min-height: 600px;
-      &__img{
+      &__img {
         display: none;
       }
-      &__single{
+      &__single {
         max-width: max-content;
         text-align: left;
       }
-      &__single--first{
+      &__single--first {
         position: absolute;
         top: 150px;
       }
-      &__single--second{
+      &__single--second {
         position: absolute;
         right: 10px;
         bottom: 20px;
       }
-      &__single--third{
+      &__single--third {
         position: absolute;
         bottom: 50px;
       }
     }
-    .es-benefits{
-      &__container{
+    .es-benefits {
+      &__container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
       }
-      &__text--one{
+      &__text--one {
         order: 1;
-      } 
-      &__img--one{
-       order: 2;
       }
-      &__text--two{
-       order: 4;
-      } 
-     &__img--two{
-       order: 3;
-      } 
+      &__img--one {
+        order: 2;
+      }
+      &__text--two {
+        order: 4;
+      }
+      &__img--two {
+        order: 3;
+      }
     }
 
-
-    
     .es-cross {
-      
       &__img {
         transition: all 0.3s;
       }
@@ -545,7 +562,6 @@ body {
             transform: scale(1.05);
           }
           .es-cross__link {
-
             outline: 2px solid black;
             background-color: $pink;
           }
@@ -554,8 +570,7 @@ body {
     }
   }
   @media screen and (min-width: 998px) {
-
-    .es-products{
+    .es-products {
       display: block;
       position: relative;
       background-image: url(images/products-bg.png);
@@ -563,17 +578,17 @@ body {
       background-position: center center;
       background-size: cover;
       min-height: 600px;
-      &__img{
+      &__img {
         display: none;
       }
-      &__single{
+      &__single {
         max-width: max-content;
         text-align: left;
       }
-      &__single--first{
+      &__single--first {
         position: absolute;
         top: 150px;
-        .es-products__title::before{
+        .es-products__title::before {
           display: inline-block;
           content: "";
           width: 300px;
@@ -585,11 +600,11 @@ body {
           right: -290px;
         }
       }
-      &__single--second{
+      &__single--second {
         position: absolute;
         right: 10px;
         bottom: 160px;
-        .es-products__title::before{
+        .es-products__title::before {
           display: inline-block;
           content: "";
           width: 200px;
@@ -600,12 +615,11 @@ body {
           bottom: -120px;
           left: -120px;
         }
-
       }
-      &__single--third{
+      &__single--third {
         position: absolute;
         bottom: 50px;
-        .es-products__title::before{
+        .es-products__title::before {
           display: inline-block;
           content: "";
           width: 200px;
@@ -618,7 +632,6 @@ body {
         }
       }
     }
-
   }
 }
 

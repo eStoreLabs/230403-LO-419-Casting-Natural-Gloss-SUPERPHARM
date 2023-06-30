@@ -112,6 +112,40 @@ body {
     margin: unset;
   }
 }
+#es-RC-content.es-RC .es-discover {
+  background-color: #e9809c;
+  text-align: center;
+  padding-block: 1.5rem;
+  padding-inline: 1rem;
+}
+#es-RC-content.es-RC .es-discover__header {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+#es-RC-content.es-RC .es-formula {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: 1.5rem;
+  padding-inline: 1rem;
+}
+#es-RC-content.es-RC .es-formula__header {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+#es-RC-content.es-RC .es-formula__img {
+  width: 100%;
+  height: auto;
+}
+@media (min-width: 768px) {
+  #es-RC-content.es-RC .es-formula {
+    flex-direction: row;
+  }
+  #es-RC-content.es-RC .es-formula__Ctn--left {
+    max-width: 45%;
+    padding-left: 2rem;
+  }
+}
 #es-RC-content.es-RC .es-benefits__container {
   width: 100%;
   display: grid;
@@ -314,7 +348,8 @@ body {
   text-align: center;
   font-size: 14px;
 }
-#es-RC-content.es-RC .es-colors__text p, #es-RC-content.es-RC .es-colors__text h2 {
+#es-RC-content.es-RC .es-colors__text p,
+#es-RC-content.es-RC .es-colors__text h2 {
   margin: 5px 0;
 }
 #es-RC-content.es-RC .es-colors__title--single {
