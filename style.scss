@@ -380,14 +380,23 @@ text-transform: uppercase;
     &__img {
       margin-top: 20px;
       width: 100%;
+
       img {
         width: 100%;
+        scale: 1;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+          scale: 1.1;
+        }
+      }
+      &:hover ~ .es-colors__btn {
+        background-color: $pink;
+        transition: all 0.2s ease-in-out;
       }
     }
     &__text {
       height: 100%;
       @include text;
-
       font-weight: 000;
       display: flex;
       flex-direction: column;
@@ -412,6 +421,9 @@ text-transform: uppercase;
       text-align: center;
       padding: 0.7rem;
       margin-top: 1.3rem;
+      &:hover {
+        background-color: $pink;
+      }
     }
   }
 

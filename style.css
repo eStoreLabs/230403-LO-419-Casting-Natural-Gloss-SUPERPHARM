@@ -355,6 +355,15 @@ body {
 }
 #es-RC-content.es-RC .es-colors__img img {
   width: 100%;
+  scale: 1;
+  transition: all 0.2s ease-in-out;
+}
+#es-RC-content.es-RC .es-colors__img img:hover {
+  scale: 1.1;
+}
+#es-RC-content.es-RC .es-colors__img:hover ~ .es-colors__btn {
+  background-color: #e9809c;
+  transition: all 0.2s ease-in-out;
 }
 #es-RC-content.es-RC .es-colors__text {
   height: 100%;
@@ -388,6 +397,9 @@ body {
   text-align: center;
   padding: 0.7rem;
   margin-top: 1.3rem;
+}
+#es-RC-content.es-RC .es-colors__btn:hover {
+  background-color: #e9809c;
 }
 #es-RC-content.es-RC .es-models {
   background-image: url("./images/shiny-happy-people.png");
