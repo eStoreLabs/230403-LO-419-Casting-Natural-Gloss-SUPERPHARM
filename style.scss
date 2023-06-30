@@ -2,24 +2,11 @@
 
 @font-face {
   font-family: 'Gotham';
-  src: url('fonts/Gotham-Black.otf');
-  font-weight: 800;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Gotham';
   src: url('fonts/Gotham-Bold.otf');
   font-weight: 700;
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'Gotham';
-  src: url('fonts/Gotham-Medium.otf');
-  font-weight: 500;
-  font-style: normal;
-}
 
 @font-face {
   font-family: 'Gotham';
@@ -28,19 +15,9 @@
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'ITCAvantGardeStd';
-  src: url('fonts/ITCAvantGardeStd-Demi.otf');
-  font-weight: 600;
-  font-style: normal;
-}
-
-
 
 $regular: 'Gotham', sans-serif;
-$condensed: 'ITCAvantGardeStd', sans-serif;
-$brown: #753934;
-$pink: #fbecea;
+$pink: #e9809c;
 
 html,
 body {
@@ -63,10 +40,10 @@ body {
   margin: 0 auto;
 }
 
-#es-maybelline.es-maybelline {
+#es-RC-content.es-RC {
   font-family: $regular;
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.2;
   max-width: 998px;
   margin: 0 auto;
@@ -95,116 +72,71 @@ body {
       margin-bottom: 56px;
       font-family: $regular;
       text-align: center;
-      color: $brown;
       span {
         font-weight: 300;
       }
   }
   .es-kv {
-    min-height: 400px;
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    background-color: $pink;
-    background-image: url(images/kv-bg.png);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    &__content{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+    img {
+      max-width: 100%;
+      max-height: auto;
+      margin-bottom: 0;
     }
-    &__logo{
-      max-width: 200px;
-      margin: 24px;
-      
-    }
-    &__title{
-      background-color: $brown;
-      width: 200%;
-      img{
-        max-width: 320px;
-        padding: 24px;
-        margin: 0 24px;
-      }
-    }
-    &__text{
-      @include text;
-      max-width: 300px;
-      color: $brown;
-      margin: 24px;
-    }
-    &__img{
-      width: 100%;
-      height: 100%;
-      img{
-        width: 100%;
-        height: 100%;
-      }
+    &__headline {
+      font-weight: 700;
+      text-align: center;
+      color: white;
+      background-color: $pink;
+      font-size: 1.2rem;
+      padding: 0.8rem;
+      margin-top: 0;
     }
   }
 
   .es-features {
-    margin-bottom: 22px;
-    &__title {
-      @include text;
-      padding: 0 16px;
-      padding-top: 40px;
-      font-weight: 700;
-      text-transform: uppercase;
-      font-size: 38px;
-      letter-spacing: -1px;
-      margin-bottom: 16px;
-      text-align: center;
-      font-family: $condensed;
-      span {
-        font-weight: 300;
-      }
-    }
-    &__subtitle{
-      @include text;
-      color: $brown;
-      text-align: center;
-    }
-    &__container{
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    }
-    &__img{
-      padding: 32px;
-      img{
-        width: 100%;
-        height: 100%;
-      }
-    }
-    &__content{
+    padding-block: 2rem;
+    &__Ctn {
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
-      li,p{
-        color: $brown;
-      }
-      li{
-        text-transform: uppercase;
-        font-weight: 700;
-        position: relative;
-      }
-      li::before{
-        display: none;
-        content: url(images/line-1.png);
+      padding: 2rem 1rem;
+    }
+    &__img {
+      display: block;
+      width: 100%;
+      margin: auto;
+      &--logo {
         max-width: 200px;
-        position: absolute;
-        right: 310px;
-        top:20px;
-      }
-      p{
-        margin-bottom: 40px;
       }
     }
+    &__headline {
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+    &__txt {
+      text-transform: uppercase;
+      font-size: 1.2rem;
+    }
+    &__footer {
+      text-align: center;
+      font-size: 0.9rem;
+    }
   }
-
+  @media (min-width: 768px) {
+    .es-features {
+      &__Ctn {
+        flex-direction: row-reverse;
+        &--right {
+          padding-left: 2rem;
+          max-width: 45%;
+        }
+      }
+     &__img {
+      margin: unset;
+    } 
+    }
+  }
   .es-benefits{
     &__container{
       width: 100%;
@@ -230,7 +162,7 @@ body {
       font-size: 20px;
       text-transform: uppercase;
       font-weight: 700;
-      color: $brown;
+
       span{
         font-size: 30px;
       }
@@ -238,14 +170,14 @@ body {
       .es-benefits__title::after{
         content: "";
         display: block;
-        background-color: $brown;
+
         width: 180px;
         height: 2px;
         margin-top: 20px;
       }
     &__text{
       @include text;
-      color: $brown;
+
     }
     &__text--one{
       order: 1;
@@ -311,15 +243,15 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: $brown;
+
   }
   &__title{
-    color: $brown;
+
     text-transform: uppercase;
     &::after{
       content: "";
         display: block;
-        background-color: $brown;
+
         width: 180px;
         height: 2px;
         margin-top: 20px;
@@ -348,12 +280,12 @@ body {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 30px;
-    color: $brown;
+
     text-align: center;
     padding: 30px;
   }
   &__text{
-    color: $brown;
+
     margin-top: 20px;
     padding: 10px;
     text-align: center;
@@ -380,7 +312,7 @@ body {
     justify-content: center;
     align-items: center;
     &__title{
-      color: $brown;
+
       text-transform: uppercase;
       text-align: center;
       padding-top: 12px;
@@ -412,7 +344,7 @@ body {
     &__text{
       height: 100%;
       @include text;
-      color: $brown;
+
       font-weight: 000;
       display: flex;
       flex-direction: column;
@@ -436,7 +368,7 @@ body {
     &__text {
       text-align: center;
       font-size: 10px;
-      color: $brown;
+
       margin: 0;
     }
   }
@@ -450,7 +382,7 @@ body {
       text-transform: uppercase;
       font-size: 30px;
       margin-bottom: 16px;
-      color: $brown;
+
       text-align: center;
       span {
         font-weight: 300;
@@ -464,7 +396,7 @@ body {
       padding-bottom: 25px;
       p{
         line-height: 25px;
-        color: $brown;
+
       }
       span{
         font-weight: 700;
@@ -495,27 +427,25 @@ body {
     &__name {
       @include text;
       text-transform: uppercase;
-      font-family: $condensed;
       font-weight: 700;
       text-align: center;
       margin-bottom: 18px;
-      color: $brown
+
     }
     &__desc {
       @include text;
       text-align: center;
       margin-top: 10px;
       margin-bottom: 5px;
-      color: $brown
+
     }
     &__link {
       @include text;
-      background: $brown;
+
       color: $pink;
       text-decoration: none;
       padding: 10px 25px;
       font-weight: 700;
-      font-family: $condensed;
       text-align: center;
       display: inline-block;
     }
@@ -547,25 +477,10 @@ body {
     }
   }
 
-  @media screen and (min-width: 560px) {
-    .es-kv {
-      
-    }
-    
-  }
+
 
   @media screen and (min-width: 768px) {
-    .es-kv {
-      &__img{
-        width: 100%;
-        height: 100%;
-        img{
-          width: 120%;
-          height: 100%;
-          margin-left: -150px;
-        }
-      }
-    }
+
     .es-products{
       display: block;
       position: relative;
@@ -615,14 +530,7 @@ body {
     }
 
 
-    .es-features {
-     &__content{
-       li::before{
-        display: block;
-        
-       }
-     }
-    }
+    
     .es-cross {
       
       &__img {
@@ -637,8 +545,8 @@ body {
             transform: scale(1.05);
           }
           .es-cross__link {
-            color: $brown;
-            outline: 2px solid $brown;
+
+            outline: 2px solid black;
             background-color: $pink;
           }
         }
@@ -646,22 +554,7 @@ body {
     }
   }
   @media screen and (min-width: 998px) {
-    .es-kv {
-      &__img{
-        width: 100%;
-        height: 100%;
-        img{
-          width: 120%;
-          height: 100%;
-          margin-left: -150px;
-        }
-      }
-      &__title{
-        img{
-          max-width: 400px;
-        }
-      }
-    }
+
     .es-products{
       display: block;
       position: relative;
