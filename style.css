@@ -78,6 +78,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 2rem 1rem;
+  text-align: center;
 }
 #es-RC-content.es-RC .es-features__img {
   display: block;
@@ -103,6 +104,7 @@ body {
 @media (min-width: 768px) {
   #es-RC-content.es-RC .es-features__Ctn {
     flex-direction: row-reverse;
+    text-align: left;
   }
   #es-RC-content.es-RC .es-features__Ctn--right {
     padding-left: 2rem;
@@ -388,7 +390,7 @@ body {
   margin-top: 1.3rem;
 }
 #es-RC-content.es-RC .es-models {
-  background-image: url(images/models.png);
+  background-image: url("./images/shiny-happy-people.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -402,14 +404,13 @@ body {
   max-width: 320px;
 }
 #es-RC-content.es-RC .es-footer {
-  background-color: #e9809c;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 25px;
 }
 #es-RC-content.es-RC .es-footer__logo img {
-  max-width: 200px;
+  max-width: 150px;
 }
 @media screen and (min-width: 768px) {
   #es-RC-content.es-RC .es-benefits__container {
