@@ -141,6 +141,7 @@ body {
     padding-block: 1.5rem;
     padding-inline: 1rem;
     &__header {
+      font-size: 2rem;
       text-transform: uppercase;
       font-weight: 700;
     }
@@ -292,7 +293,22 @@ body {
       }
     }
   }
-
+.es-use {
+  padding-top: 3rem;
+  text-align: center;
+  &__title {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 2rem;
+  }
+  &__txt {
+    margin-bottom: 2rem;
+  }
+  &__img {
+    max-width: 100%;
+    height: auto;
+  }
+}
   
 
   .es-video {
@@ -300,7 +316,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-block: 3rem;
+    padding-top: 3rem;
 text-align: center;
 text-transform: uppercase;
       font-weight: 700;
@@ -327,19 +343,21 @@ text-transform: uppercase;
   }
 
   .es-colors {
-    width: 100%;
-    background-color: $pink;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     &__title {
       text-transform: uppercase;
-      text-align: center;
-      padding-top: 12px;
-      span {
-        font-weight: lighter;
-      }
+      font-weight: 700;
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    &__subtitle {
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-top: 0;
     }
     &__container {
       display: flex;
@@ -369,7 +387,6 @@ text-transform: uppercase;
       font-weight: 000;
       display: flex;
       flex-direction: column;
-      text-transform: uppercase;
       text-align: center;
       font-size: 14px;
       p,
@@ -378,96 +395,22 @@ text-transform: uppercase;
       }
     }
     &__title--single {
-      text-transform: uppercase;
       text-align: center;
-      font-weight: 600;
-    }
-  }
-
-  .es-disc {
-    background-color: $pink;
-    padding: 32px;
-    &__text {
-      text-align: center;
-      font-size: 10px;
-
-      margin: 0;
-    }
-  }
-
-  .es-cross {
-    padding: 40px 16px;
-    background-color: $pink;
-    &__title {
-      @include text;
-      font-weight: 700;
-      text-transform: uppercase;
-      font-size: 30px;
-      margin-bottom: 16px;
-
-      text-align: center;
-      span {
-        font-weight: 300;
-      }
-    }
-    &__content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding-bottom: 25px;
-      p {
-        line-height: 25px;
-      }
-      span {
-        font-weight: 700;
-      }
-    }
-    &__container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: flex-end;
-      gap: 32px 25px;
-    }
-    &__single {
-      max-width: 200px;
-      display: flex;
-      align-items: center;
-      flex-flow: column;
-    }
-    &__packshot {
-      margin-bottom: 16px;
-      padding-bottom: 16px;
-      width: 100%;
-    }
-    &__img {
-      @include img;
-    }
-    &__name {
-      @include text;
-      text-transform: uppercase;
-      font-weight: 700;
-      text-align: center;
-      margin-bottom: 18px;
     }
     &__desc {
-      @include text;
-      text-align: center;
-      margin-top: 10px;
-      margin-bottom: 5px;
-    }
-    &__link {
-      @include text;
-
-      color: $pink;
-      text-decoration: none;
-      padding: 10px 25px;
       font-weight: 700;
+      text-transform: uppercase;
+    }
+    &__btn {
+      background-color: #000;
+      color:#fff;
+      text-decoration: none;
       text-align: center;
-      display: inline-block;
+      padding: 0.7rem;
+      margin-top: 1.3rem;
     }
   }
+
   .es-models {
     background-image: url(images/models.png);
     background-repeat: no-repeat;
@@ -544,25 +487,6 @@ text-transform: uppercase;
       }
     }
 
-    .es-cross {
-      &__img {
-        transition: all 0.3s;
-      }
-      &__link {
-        transition: color 0.3s;
-      }
-      &__single {
-        &:hover {
-          .es-cross__img {
-            transform: scale(1.05);
-          }
-          .es-cross__link {
-            outline: 2px solid black;
-            background-color: $pink;
-          }
-        }
-      }
-    }
   }
   @media screen and (min-width: 998px) {
     .es-products {
