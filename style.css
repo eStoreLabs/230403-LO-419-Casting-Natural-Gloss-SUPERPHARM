@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 @font-face {
   font-family: "Gotham";
   src: url("fonts/Gotham-Bold.otf");
@@ -16,6 +17,17 @@ body {
   padding: 0;
 }
 
+@keyframes es-scaleUp {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 #es-RC-content.es-RC {
   font-family: "Gotham", sans-serif;
   font-size: 16px;
@@ -56,10 +68,89 @@ body {
 #es-RC-content.es-RC .es-section__title span {
   font-weight: 300;
 }
+#es-RC-content.es-RC .es-kv {
+  font-family: "Montserrat", sans-serif;
+}
 #es-RC-content.es-RC .es-kv img {
   max-width: 100%;
   max-height: auto;
   margin-bottom: 0;
+  display: block;
+  margin: auto;
+}
+#es-RC-content.es-RC .es-kv__Ctn {
+  background-image: url(./images/kv-bg.png);
+  background-position: right;
+  background-size: cover;
+  color: #FFF;
+}
+#es-RC-content.es-RC .es-kv__Ctn--left {
+  background-image: url(./images/kv-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-transform: uppercase;
+  padding: 0rem 0.5rem 0.5rem 0.5rem;
+}
+#es-RC-content.es-RC .es-kv__title {
+  font-size: 2rem;
+  padding-top: 12rem;
+  margin-bottom: 0;
+}
+#es-RC-content.es-RC .es-kv__title span {
+  font-weight: 700;
+}
+#es-RC-content.es-RC .es-kv__subtitle {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+#es-RC-content.es-RC .es-kv__starring {
+  font-size: 0.5rem;
+}
+#es-RC-content.es-RC .es-kv__logoCtn {
+  padding: 2rem;
+}
+#es-RC-content.es-RC .es-kv__logo {
+  width: 200px;
+}
+#es-RC-content.es-RC .es-kv__imgCtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+#es-RC-content.es-RC .es-kv__before-after {
+  position: relative;
+  scale: 1;
+  animation: es-scaleUp 6s ease-in-out 0s infinite normal forwards;
+}
+#es-RC-content.es-RC .es-kv__before-after::before {
+  content: "PRZED";
+  position: absolute;
+  left: 40%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+#es-RC-content.es-RC .es-kv__before-after::after {
+  content: "PO*";
+  position: absolute;
+  left: 60%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+#es-RC-content.es-RC .es-kv__disc--1 {
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: left;
+}
+#es-RC-content.es-RC .es-kv__disc--2 {
+  text-transform: uppercase;
+  text-align: right;
+  font-size: 0.5rem;
 }
 #es-RC-content.es-RC .es-kv__headline {
   font-weight: 700;
@@ -69,6 +160,51 @@ body {
   font-size: 1.2rem;
   padding: 0.8rem;
   margin-top: 0;
+}
+@media (min-width: 420px) {
+  #es-RC-content.es-RC .es-kv__Ctn {
+    display: flex;
+    flex-direction: row-reverse;
+    background-position: center;
+    align-items: flex-end;
+  }
+  #es-RC-content.es-RC .es-kv__Ctn--left {
+    background-image: none;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-end;
+    outline: 1px solid blue;
+  }
+  #es-RC-content.es-RC .es-kv__Ctn--right {
+    width: 55%;
+    min-height: 450px;
+    outline: 1px solid orange;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  #es-RC-content.es-RC .es-kv__logoCtn {
+    padding-bottom: 0;
+  }
+  #es-RC-content.es-RC .es-kv__logoCtn img {
+    margin: unset;
+  }
+  #es-RC-content.es-RC .es-kv__photosCtn {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+  }
+  #es-RC-content.es-RC .es-kv__before-after img {
+    width: 80%;
+  }
+  #es-RC-content.es-RC .es-kv__packshot {
+    width: 30%;
+    margin-left: -100px;
+  }
+  #es-RC-content.es-RC .es-kv__badges {
+    width: 40%;
+  }
 }
 #es-RC-content.es-RC .es-features {
   padding-block: 2rem;
