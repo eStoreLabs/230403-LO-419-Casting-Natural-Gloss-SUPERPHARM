@@ -88,10 +88,16 @@ body {
   background-repeat: no-repeat;
   text-transform: uppercase;
   padding: 0rem 0.5rem 0.5rem 0.5rem;
+  min-height: 330px;
+  display: flex;
+  flex-direction: column;
+  align-items: space-around;
+}
+#es-RC-content.es-RC .es-kv__txtCtn {
+  margin-top: 2rem;
 }
 #es-RC-content.es-RC .es-kv__title {
-  font-size: 2rem;
-  padding-top: 12rem;
+  font-size: 1.7rem;
   margin-bottom: 0;
 }
 #es-RC-content.es-RC .es-kv__title span {
@@ -112,18 +118,29 @@ body {
 #es-RC-content.es-RC .es-kv__logo {
   width: 200px;
 }
+#es-RC-content.es-RC .es-kv__Ctn--right .es-kv__logoCtn {
+  display: none;
+}
 #es-RC-content.es-RC .es-kv__imgCtn {
   padding: 1rem;
 }
 #es-RC-content.es-RC .es-kv__photosCtn {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   align-items: center;
   justify-content: center;
   gap: 2rem;
 }
+#es-RC-content.es-RC .es-kv__photosCtn--1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+#es-RC-content.es-RC .es-kv__photosCtn--1 .es-kv__packshot {
+  max-width: 80%;
+}
 #es-RC-content.es-RC .es-kv__before-after {
-  display: none;
   position: relative;
   scale: 1;
   animation: es-scaleUp 6s ease-in-out 0s infinite normal forwards;
@@ -135,7 +152,7 @@ body {
 #es-RC-content.es-RC .es-kv__before-after::before {
   content: "PRZED";
   position: absolute;
-  left: 40%;
+  left: 25%;
   top: 50%;
   transform: translate(-50%, -50%);
   font-family: "Montserrat", sans-serif;
@@ -144,7 +161,7 @@ body {
 #es-RC-content.es-RC .es-kv__before-after::after {
   content: "PO*";
   position: absolute;
-  left: 60%;
+  left: 75%;
   top: 50%;
   transform: translate(-50%, -50%);
   font-family: "Montserrat", sans-serif;
@@ -172,7 +189,7 @@ body {
 @media (min-width: 420px) {
   #es-RC-content.es-RC .es-kv__Ctn {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     background-position: center;
     align-items: flex-end;
   }
@@ -181,52 +198,48 @@ body {
     width: 50%;
     display: flex;
     flex-direction: column;
-    justify-items: flex-end;
-    outline: 1px solid blue;
+    justify-items: end;
+  }
+  #es-RC-content.es-RC .es-kv__Ctn--left .es-kv__logoCtn {
+    display: none;
+  }
+  #es-RC-content.es-RC .es-kv__Ctn--left .es-kv__txtCtn {
+    margin-top: auto;
   }
   #es-RC-content.es-RC .es-kv__Ctn--right {
     width: 50%;
-    min-height: 450px;
-    outline: 1px solid orange;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
   }
-  #es-RC-content.es-RC .es-kv__imgCtn {
-    align-items: unset;
+  #es-RC-content.es-RC .es-kv__Ctn--right .es-kv__logoCtn {
+    display: block;
   }
   #es-RC-content.es-RC .es-kv__logoCtn {
     padding-bottom: 0;
     display: block;
   }
   #es-RC-content.es-RC .es-kv__photosCtn {
-    display: flex;
     flex-direction: row;
-    justify-content: center;
-    outline: 1px solid red;
     position: relative;
   }
-  #es-RC-content.es-RC .es-kv__photosCtn::before {
-    content: url("./images/before-after.png");
-    position: absolute;
-    bottom: 0;
-    left: -5%;
-  }
-  #es-RC-content.es-RC .es-kv__before-after img {
-    width: 80%;
-    margin-left: -10px;
+  #es-RC-content.es-RC .es-kv__photosCtn--1 {
+    flex-direction: row;
+    justify-content: center;
+    order: 2;
   }
   #es-RC-content.es-RC .es-kv__before-after {
-    font-size: 0.8rem;
-  }
-  #es-RC-content.es-RC .es-kv__before-after::before {
-    left: 13%;
-  }
-  #es-RC-content.es-RC .es-kv__before-after::after {
-    left: 54%;
+    position: absolute;
+    bottom: 0;
+    left: -9%;
+    width: 30%;
+    max-width: 120px;
+    font-size: 0.5rem;
   }
   #es-RC-content.es-RC .es-kv__packshot {
     width: 37%;
+    scale: 1;
+    transition: all 0.2s ease-in;
+  }
+  #es-RC-content.es-RC .es-kv__packshot:hover {
+    scale: 1.05;
   }
   #es-RC-content.es-RC .es-kv__badges {
     width: 44%;
@@ -234,6 +247,11 @@ body {
   #es-RC-content.es-RC .es-kv__disc--1 {
     font-size: 0.6rem;
     margin-left: 2rem;
+  }
+}
+@media (min-width: 650px) {
+  #es-RC-content.es-RC .es-kv__before-after {
+    font-size: 0.8rem;
   }
 }
 #es-RC-content.es-RC .es-features {

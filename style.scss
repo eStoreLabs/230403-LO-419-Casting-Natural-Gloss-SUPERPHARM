@@ -110,11 +110,19 @@ body {
       background-repeat: no-repeat;
       text-transform: uppercase;
       padding: 0rem 0.5rem 0.5rem 0.5rem;
+      min-height: 330px;
+      display: flex;
+      flex-direction: column;
+      align-items: space-around;
+    }
+    &__txtCtn {
+      margin-top: 2rem;
     }
     &__title {
-      font-size: 2rem;
-      padding-top: 12rem;
+      font-size: 1.7rem;
+      // padding-top: 12rem;
       margin-bottom: 0;
+      
       span {
         font-weight: 700;
       }
@@ -135,23 +143,32 @@ body {
     &__logo {
       width: 200px;
     }
-
+    &__Ctn--right {
+      .es-kv__logoCtn {
+        display: none;
+      }
+    }
     &__imgCtn {
-      // display: flex;
-      // flex-direction: column;
-      // align-items: center;
-      // justify-content: center;
       padding: 1rem;
     }
     &__photosCtn {
       display: flex;
-      flex-direction: column;
+      flex-direction: column-reverse;
       align-items: center;
       justify-content: center;
       gap: 2rem;
     }
+    &__photosCtn--1 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      & .es-kv__packshot {
+      max-width: 80%;
+    }
+    }
+    
     &__before-after {
-      display: none;
       position: relative;
       scale: 1.0;
       animation: es-scaleUp 6s ease-in-out 0s infinite normal forwards;
@@ -162,7 +179,7 @@ body {
       &::before {
         content: "PRZED";
         position: absolute;
-        left: 40%;
+        left: 25%;
         top: 50%;
         transform: translate(-50%, -50%);
         font-family: 'Montserrat', sans-serif;
@@ -172,7 +189,7 @@ body {
       &::after {
         content: "PO*";
         position: absolute;
-        left: 60%;
+        left: 75%;
         top: 50%;
         transform: translate(-50%, -50%);
         font-family: 'Montserrat', sans-serif;
@@ -205,7 +222,7 @@ body {
   .es-kv {
     &__Ctn {
       display: flex;
-      flex-direction: row-reverse;
+      flex-direction: row;
       background-position: center;
       align-items: flex-end;
       
@@ -215,58 +232,50 @@ body {
       width: 50%;
       display: flex;
       flex-direction: column;
-      justify-items: flex-end;
-      outline: 1px solid blue;
+      justify-items: end;
+      & .es-kv__logoCtn {
+        display: none;
+      }
+      & .es-kv__txtCtn {
+        margin-top: auto;
+      }
     }
     &__Ctn--right {
       width: 50%;
-      min-height: 450px;
-      outline: 1px solid orange;
-      display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+    & .es-kv__logoCtn {
+      display: block;
     }
-    &__imgCtn {
-      align-items: unset;
     }
+    
     &__logoCtn {
       padding-bottom: 0;
       display: block;
-      // img {
-      //   margin: unset;
-      // }
     }
     &__photosCtn {
-      display: flex;
       flex-direction: row;
-      // align-items: flex-end;
-      justify-content: center;
-      outline: 1px solid red;
       position: relative;
-      &::before {
-        content: url("./images/before-after.png");
-        position: absolute;
-        bottom: 0;
-        left: -5%;
-      }
     }
-    
-    &__before-after img {
-      width: 80%;
-      margin-left: -10px;
+    &__photosCtn--1 {
+      flex-direction: row;
+    justify-content: center;
+      order: 2;
     }
+
     &__before-after {
-      font-size: 0.8rem;
-      &::before {
-        left: 13%;
-      }
-      &::after {
-        left: 54%;
-      }
+      position: absolute;
+      bottom: 0;
+      left: -9%;
+      width: 30%;
+      max-width: 120px;
+      font-size: 0.5rem;
     }
     &__packshot {
       width: 37%;
-      // margin-left: -100px;
+      scale: 1;
+      transition: all 0.2s ease-in;
+      &:hover {
+        scale: 1.05;
+      }
     }
     &__badges {
       width: 44%;
@@ -276,6 +285,13 @@ body {
       margin-left: 2rem;
     }
   }
+}
+@media (min-width: 650px) {
+.es-kv {
+  &__before-after {
+    font-size: 0.8rem;
+  }
+}
 }
   .es-features {
     padding-block: 2rem;
