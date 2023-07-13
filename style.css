@@ -95,6 +95,65 @@ body {
 }
 #es-RC-content.es-RC .es-kv__txtCtn {
   margin-top: 2rem;
+  position: relative;
+}
+#es-RC-content.es-RC .es-kv__txtCtn .es-kv__before-after {
+  position: absolute;
+  left: 55%;
+  top: 28%;
+  transform: translate(-50%, -50%);
+  scale: 0.6;
+  animation: es-scaleUp 6s ease-in-out 0s infinite normal forwards;
+}
+@media (min-width: 420px) {
+  #es-RC-content.es-RC .es-kv__txtCtn .es-kv__before-after {
+    top: unset;
+    left: 83%;
+    scale: 1;
+  }
+}
+@media (min-width: 530px) {
+  #es-RC-content.es-RC .es-kv__txtCtn .es-kv__before-after {
+    right: -22%;
+    left: unset;
+    bottom: 25%;
+    scale: 0.8;
+    z-index: 1;
+  }
+}
+@media (min-width: 608px) {
+  #es-RC-content.es-RC .es-kv__txtCtn .es-kv__before-after {
+    bottom: 16%;
+  }
+}
+@media (min-width: 646px) {
+  #es-RC-content.es-RC .es-kv__txtCtn .es-kv__before-after {
+    bottom: 32%;
+    right: -18%;
+    scale: 0.9;
+  }
+}
+#es-RC-content.es-RC .es-kv__txtCtn .es-kv__before-after img {
+  margin: auto;
+  display: block;
+}
+#es-RC-content.es-RC .es-kv__txtCtn .es-kv__before-after::before {
+  content: "PRZED";
+  position: absolute;
+  left: 25%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+#es-RC-content.es-RC .es-kv__txtCtn .es-kv__before-after::after {
+  content: "PO*";
+  position: absolute;
+  left: 75%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
 }
 #es-RC-content.es-RC .es-kv__title {
   font-size: 1.7rem;
@@ -139,42 +198,6 @@ body {
 }
 #es-RC-content.es-RC .es-kv__photosCtn--1 .es-kv__packshot {
   max-width: 80%;
-}
-#es-RC-content.es-RC .es-kv__before-after {
-  position: absolute;
-  left: 55%;
-  top: 28%;
-  transform: translate(-50%, -50%);
-  scale: 0.6;
-  animation: es-scaleUp 6s ease-in-out 0s infinite normal forwards;
-}
-@media (min-width: 420px) {
-  #es-RC-content.es-RC .es-kv__before-after {
-    top: unset;
-    scale: 1;
-  }
-}
-#es-RC-content.es-RC .es-kv__before-after img {
-  margin: auto;
-  display: block;
-}
-#es-RC-content.es-RC .es-kv__before-after::before {
-  content: "PRZED";
-  position: absolute;
-  left: 25%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-}
-#es-RC-content.es-RC .es-kv__before-after::after {
-  content: "PO*";
-  position: absolute;
-  left: 75%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
 }
 #es-RC-content.es-RC .es-kv__disc--1 {
   text-transform: uppercase;
