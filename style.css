@@ -141,9 +141,18 @@ body {
   max-width: 80%;
 }
 #es-RC-content.es-RC .es-kv__before-after {
-  position: relative;
-  scale: 1;
+  position: absolute;
+  left: 55%;
+  top: 27%;
+  transform: translate(-50%, -50%);
+  scale: 0.7;
   animation: es-scaleUp 6s ease-in-out 0s infinite normal forwards;
+}
+@media (min-width: 420px) {
+  #es-RC-content.es-RC .es-kv__before-after {
+    top: unset;
+    scale: 1;
+  }
 }
 #es-RC-content.es-RC .es-kv__before-after img {
   margin: auto;
