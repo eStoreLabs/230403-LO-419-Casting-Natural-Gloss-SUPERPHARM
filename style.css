@@ -143,9 +143,9 @@ body {
 #es-RC-content.es-RC .es-kv__before-after {
   position: absolute;
   left: 55%;
-  top: 27%;
+  top: 28%;
   transform: translate(-50%, -50%);
-  scale: 0.7;
+  scale: 0.6;
   animation: es-scaleUp 6s ease-in-out 0s infinite normal forwards;
 }
 @media (min-width: 420px) {
@@ -597,7 +597,7 @@ body {
 #es-RC-content.es-RC .es-models {
   background-image: url("./images/shiny-happy-people.png");
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: 38% center;
   background-size: cover;
   min-height: 550px;
   display: flex;
@@ -606,7 +606,7 @@ body {
 #es-RC-content.es-RC .es-models__img {
   margin: auto 0;
   margin-bottom: 20px;
-  max-width: 320px;
+  max-width: 280px;
 }
 #es-RC-content.es-RC .es-footer {
   display: flex;
