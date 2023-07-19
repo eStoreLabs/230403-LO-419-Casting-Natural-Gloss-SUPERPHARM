@@ -1,13 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 @font-face {
   font-family: "Gotham";
-  src: url("fonts/Gotham-Bold.otf");
+  src: url("../fonts/Gotham-Bold.otf");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: "Gotham";
-  src: url("fonts/Gotham-Book.otf");
+  src: url("../fonts/Gotham-Book.otf");
   font-weight: 400;
   font-style: normal;
 }
@@ -77,13 +77,13 @@ body {
   margin-bottom: 0;
 }
 #es-RC-content.es-RC .es-kv__Ctn {
-  background-image: url(./images/kv-bg.png);
+  background-image: url(../images/kv-bg.png);
   background-position: right;
   background-size: cover;
   color: #FFF;
 }
 #es-RC-content.es-RC .es-kv__Ctn--left {
-  background-image: url(./images/kv-bg.png);
+  background-image: url(../images/kv-bg.png);
   background-size: cover;
   background-repeat: no-repeat;
   text-transform: uppercase;
@@ -628,7 +628,7 @@ body {
   background-color: #e9809c;
 }
 #es-RC-content.es-RC .es-models {
-  background-image: url("./images/shiny-happy-people.png");
+  background-image: url("../images/shiny-happy-people.png");
   background-repeat: no-repeat;
   background-position: 38% center;
   background-size: cover;
