@@ -346,6 +346,9 @@ body {
   text-transform: uppercase;
   font-weight: 700;
 }
+#es-RC-content.es-RC .es-discover__txt {
+  font-size: 0.9rem;
+}
 #es-RC-content.es-RC .es-formula {
   display: flex;
   flex-direction: column;
@@ -466,7 +469,7 @@ body {
   text-align: center;
 }
 #es-RC-content.es-RC .es-benefits__overlay--txt--top {
-  font-size: 0.9rem;
+  font-size: 0.7rem;
 }
 #es-RC-content.es-RC .es-benefits__overlay--txt--bottom {
   font-size: 1.5rem;

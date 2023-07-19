@@ -428,6 +428,9 @@ body {
     text-transform: uppercase;
     font-weight: 700;
   }
+  &__txt {
+    font-size: 0.9rem;
+  }
 }
 
 .es-formula {
@@ -569,7 +572,7 @@ body {
       text-align: center;
 
       &--top {
-        font-size: 0.9rem;
+        font-size: 0.7rem;
       }
 
       &--bottom {
